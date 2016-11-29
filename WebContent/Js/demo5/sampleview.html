@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div ng-app="myApp">
+<div ng-controller="sampleController as ctrl">
+{{ctrl.message}}
+<br>
+Person Details:
+<br>
+{{ctrl.person.id}} {{ctrl.person.name}}
+<br>
+List of persons:
+<br>
+<ul>
+<li ng-repeat="p in ctrl.persons">
+{{p.id}}
+</ul>
+<br>
+Enter the number<br>
+<!-- it is similsr to $scope.number=number -->
+<input type="text" ng-model="ctrl.number">
+<br>
+<br>
+<button ng-click="ctrl.square()">Click Me</button>
+<br>
+<br>
+{{ctrl.answer}}
+</div>
+
+</div>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script  type="text/javascript" src="samplecontroller.js"></script>
+</html>
